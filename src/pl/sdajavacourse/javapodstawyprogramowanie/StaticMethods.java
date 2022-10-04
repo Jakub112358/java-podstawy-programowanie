@@ -2,6 +2,8 @@ package pl.sdajavacourse.javapodstawyprogramowanie;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static pl.sdajavacourse.javapodstawyprogramowanie.Launcher.numberOfExercises;
 
@@ -45,7 +47,7 @@ public class StaticMethods {
         int intNumber = 0;
         while (true) {
             try {
-                System.out.printf("input Integer number >= %d %n", minNumber);
+                System.out.printf("input Integer >= %d %n", minNumber);
                 String intInput = scanner.nextLine();
                 intNumber = Integer.parseInt(intInput);
                 if (intNumber >= minNumber) {
@@ -101,6 +103,18 @@ public class StaticMethods {
             }
         }
         return false;
+    }
+
+
+    static public int[] inputIntArray() {
+        System.out.println("input size of an array");
+        int arraySize = inputInteger(1);
+        int[] integerArray = new int[arraySize];
+        for (int i = 0; i < integerArray.length; i++) {
+            System.out.printf("input element number %d :",i+1);
+            integerArray[i]=inputInteger();
+        }
+        return integerArray;
     }
 
 

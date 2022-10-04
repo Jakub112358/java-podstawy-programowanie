@@ -8,9 +8,9 @@ public class ExerciseTwenty {
     static private Random rand = new Random();
 
     public static void runExerciseTwenty() {
-        System.out.println("Input number of tries");
         int minRandomNumber = 0;
         int maxRandomNumber = 100;
+        System.out.println("Input number of tries");
         int numberOfTries = StaticMethods.inputInteger(1);
         int randomNumber = rand.nextInt(minRandomNumber, maxRandomNumber);
         System.out.println("randomNumber = " + randomNumber);
@@ -19,7 +19,7 @@ public class ExerciseTwenty {
             System.out.printf("try number %d: %n input number between %d and %d %n", i + 1, minRandomNumber, maxRandomNumber);
             checkInputNumber(randomNumber);
         }
-        System.out.println("you used all tries :( ");
+        System.out.println("GAME OVER 😪 you used all tries :( ");
 
     }
 
@@ -30,7 +30,7 @@ public class ExerciseTwenty {
         } else if (inputNumber > randomNumber) {
             System.out.println("input is bigger than random number");
         } else {
-            System.out.println("bingo!");
+            System.out.println("bingo! 😀 ");
             System.exit(0);
         }
     }
