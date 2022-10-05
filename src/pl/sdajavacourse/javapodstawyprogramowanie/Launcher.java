@@ -15,26 +15,43 @@ import pl.sdajavacourse.javapodstawyprogramowanie.extratask7.ExtraTaskSeven;
 
 
 public class Launcher {
-    final public static int numberOfExercises = 21;
+    final public static int numberOfExercises = 23;
 
     public static void main(String[] args) {
-       ExerciseTwenty.runExerciseTwenty();
-//        int exerciseNumber = StaticMethods.setExerciseNumber();
-//        System.out.println("exerciseNumber = " + exerciseNumber);
-//        switch (exerciseNumber) {
-//            case 1 -> ExerciseOne.runExerciseOne();
-//            case 2 -> ExerciseTwo.runExerciseTwo();
-//            case 3 -> ExerciseThree.runExerciseThree();
-//            case 4 -> ExerciseFour.runExerciseFour();
-//            case 5 -> ExerciseFive.runExerciseFive();
-//            case 6 -> ExerciseSix.runExerciseSix();
-//            case 7 -> ExerciseSeven.runExerciseSeven();
-//            case 8 -> ExerciseEight.runExerciseEight();
-//            case 20 -> ExerciseTwenty.runExerciseTwenty();
-//            case 21 -> ExtraTaskFive.runExtraTaskFive();
-//            default -> {
-//            }
-//        }
+        System.out.println("""
+                set exercise number:
+                1 - circle circumference
+                2 - BMI
+                3 - quadratic real equation
+                4 - PIF PAF
+                5 - prime numbers
+                6 - harmonic series
+                7 - Fibonacci number
+                8 - calculator
+                21 - reverted array
+                22 - removing repeating numbers in array
+                23 - subtracting min and max element in array
+                """);
+
+        int exerciseNumber = StaticMethods.inputInteger(1,numberOfExercises);
+      //  int exerciseNumber = 1;
+        System.out.println("exerciseNumber = " + exerciseNumber);
+        switch (exerciseNumber) {
+            case 1 -> ExerciseOne.runExerciseOne();
+            case 2 -> ExerciseTwo.runExerciseTwo();
+            case 3 -> ExerciseThree.runExerciseThree();
+            case 4 -> ExerciseFour.runExerciseFour();
+            case 5 -> ExerciseFive.runExerciseFive();
+            case 6 -> ExerciseSix.runExerciseSix();
+            case 7 -> ExerciseSeven.runExerciseSeven();
+            case 8 -> ExerciseEight.runExerciseEight();
+            case 20 -> ExerciseTwenty.runExerciseTwenty();
+            case 21 -> ExtraTaskFive.runExtraTaskFive();
+            case 22 -> ExtraTaskSix.runExtraTaskSix();
+            case 23 -> ExtraTaskSeven.runExtraTaskSeven();
+            default -> {
+            }
+        }
     }
 
 }

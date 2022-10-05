@@ -1,49 +1,35 @@
 package pl.sdajavacourse.javapodstawyprogramowanie.exercise3;
 
-import java.util.Scanner;
+import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
+
 
 public class ExerciseThree {
 
     public static void runExerciseThree() {
-        System.out.println("In this exercise, the program solves quadratic real equation with integer factors");
+        System.out.println("In this exercise, the program solves quadratic real equation \"Ax^2 + Bx + C = 0\" with floating factors");
         printResults(solveEquation(setEquationFactors()));
 
     }
 
-    private static int setSingleFactor() {
-        //    String equationFactorInput;
-        Scanner scanner = new Scanner(System.in);
-        int equationFactor = 0;
-        while (true) {
-            System.out.println("Set equation factor as integer.");
-            String equationFactorInput = scanner.nextLine();
-            try {
-                equationFactor = Integer.parseInt(equationFactorInput);
-                break;
-            } catch (Exception e) {
-                System.out.println("wrong input format");
-            }
-        }
-        return equationFactor;
-    }
 
-    private static int[] setEquationFactors() {
-        int[] equationFactor = new int[3];
+    private static double[] setEquationFactors() {
+        double[] equationFactor = new double[3];
         for (int i = 0; i < equationFactor.length; i++) {
-            equationFactor[i] = setSingleFactor();
+            System.out.printf("set equation factor " + (char)(65+i) + ": ");
+            equationFactor[i] = StaticMethods.inputDouble();
         }
         return equationFactor;
 
     }
 
-    private static double[] solveEquation(int[] equationFactor) {
+    private static double[] solveEquation(double[] equationFactor) {
         double[] result = new double[2];
-        int delta = equationFactor[1] * equationFactor[1] - 4 * equationFactor[0] * equationFactor[2];
+        double delta = equationFactor[1] * equationFactor[1] - 4 * equationFactor[0] * equationFactor[2];
         if (delta > 0) {
-            result[0] = (-1 * equationFactor[1] - Math.sqrt((double) delta)) / (2 * equationFactor[0]);
-            result[1] = (-1 * equationFactor[1] + Math.sqrt((double) delta)) / (2 * equationFactor[0]);
+            result[0] = (-1 * equationFactor[1] - Math.sqrt( delta)) / (2 * equationFactor[0]);
+            result[1] = (-1 * equationFactor[1] + Math.sqrt( delta)) / (2 * equationFactor[0]);
         } else {
-            System.out.println("delta ujemna");
+            System.out.println("delta < 0");
             System.exit(0);
         }
 
