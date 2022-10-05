@@ -1,23 +1,30 @@
 package pl.sdajavacourse.javapodstawyprogramowanie.extratask5;
 
-import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
+import java.util.Scanner;
 
-import java.util.Arrays;
-
+//W podanym ciągu znaków znajdź najdłuższy podciąg składający się z jednego znaku:
+//
+//        AABCDDBBBEA -> “B:3” <br>
 public class ExtraTaskFive {
     public static void runExtraTaskFive() {
-        System.out.println("This program inverts elements of an array");
-        int[] inputArray = StaticMethods.inputIntArray();
-        System.out.println("array before being reverted: " + Arrays.toString(inputArray));
-        int[] revertedArray = reverseArray(inputArray);
-        System.out.println("reverted array" + Arrays.toString(revertedArray));
-    }
-
-    private static int[] reverseArray(int[] inputArray) {
-        int[] result = new int[inputArray.length];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = inputArray [inputArray.length-i-1];
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("input String: ");
+        String inputString = scanner.nextLine();
+        char charRepeated = inputString.charAt(0);
+        int counter=1;
+        int maxCount=1;
+        for (int i = 0; i < inputString.length()-1; i++) {
+            if( inputString.charAt(i)==inputString.charAt(i+1)){
+                counter++;
+                if(counter>maxCount){
+                    maxCount=counter;
+                    charRepeated = inputString.charAt(i);
+                }
+            }
+            else {
+                counter = 1;
+            }
         }
-        return result;
+        System.out.println(charRepeated + ": " +maxCount);
     }
 }

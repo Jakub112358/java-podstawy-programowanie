@@ -1,11 +1,11 @@
-package pl.sdajavacourse.javapodstawyprogramowanie.extratask7;
+package pl.sdajavacourse.javapodstawyprogramowanie.extratask3;
 
 import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 
 import java.util.Arrays;
 
-public class ExtraTaskSeven {
-    public static void runExtraTaskSeven() {
+public class ExtraTaskThree {
+    public static void runExtraTaskThree() {
 
         int[] inputArray = StaticMethods.inputIntArray();
         System.out.println("input array: " + Arrays.toString(inputArray));
