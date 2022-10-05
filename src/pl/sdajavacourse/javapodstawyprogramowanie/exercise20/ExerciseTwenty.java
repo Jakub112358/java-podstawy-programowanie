@@ -5,7 +5,7 @@ import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 import java.util.Random;
 
 public class ExerciseTwenty {
-    static private Random rand = new Random();
+    static private final Random rand = new Random();
 
     public static void runExerciseTwenty() {
         int minRandomNumber = 0;

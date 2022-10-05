@@ -9,6 +9,7 @@ import pl.sdajavacourse.javapodstawyprogramowanie.exercise6.ExerciseSix;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise7.ExerciseSeven;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise8.ExerciseEight;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise20.ExerciseTwenty;
+import pl.sdajavacourse.javapodstawyprogramowanie.exercise9.ExerciseNine;
 import pl.sdajavacourse.javapodstawyprogramowanie.extratask5.ExtraTaskFive;
 import pl.sdajavacourse.javapodstawyprogramowanie.extratask6.ExtraTaskSix;
 import pl.sdajavacourse.javapodstawyprogramowanie.extratask7.ExtraTaskSeven;
@@ -33,8 +34,8 @@ public class Launcher {
                 23 - subtracting min and max element in array
                 """);
 
-        int exerciseNumber = StaticMethods.inputInteger(1,numberOfExercises);
-      //  int exerciseNumber = 1;
+      //  int exerciseNumber = StaticMethods.inputInteger(1,numberOfExercises);
+        int exerciseNumber = 9;
         System.out.println("exerciseNumber = " + exerciseNumber);
         switch (exerciseNumber) {
             case 1 -> ExerciseOne.runExerciseOne();
@@ -45,6 +46,7 @@ public class Launcher {
             case 6 -> ExerciseSix.runExerciseSix();
             case 7 -> ExerciseSeven.runExerciseSeven();
             case 8 -> ExerciseEight.runExerciseEight();
+            case 9 -> ExerciseNine.runExerciseNine();
             case 20 -> ExerciseTwenty.runExerciseTwenty();
             case 21 -> ExtraTaskFive.runExtraTaskFive();
             case 22 -> ExtraTaskSix.runExtraTaskSix();
