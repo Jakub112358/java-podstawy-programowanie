@@ -21,7 +21,7 @@ import pl.sdajavacourse.javapodstawyprogramowanie.extratask6.ExtraTaskSix;
 
 
 public class Launcher {
-    final public static int numberOfExercises = 25;
+    final public static int numberOfExercises = 26;
     public static void main(String[] args) {
 //        System.out.println("""
 //                set exercise number:

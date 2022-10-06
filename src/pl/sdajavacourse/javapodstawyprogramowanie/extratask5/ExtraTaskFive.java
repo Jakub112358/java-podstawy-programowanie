@@ -10,6 +10,10 @@ public class ExtraTaskFive {
         Scanner scanner = new Scanner(System.in);
         System.out.print("input String: ");
         String inputString = scanner.nextLine();
+        if(inputString.equals("")){
+            System.out.println("empty imput string");
+            System.exit(0);
+        }
         char charRepeated = inputString.charAt(0);
         int counter=1;
         int maxCount=1;

@@ -15,22 +15,30 @@ public class ExtraTaskSix {
         String alphabet = "aąbcćdeęfghijklłmnńoóprsśtuwyzżź";
 
         System.out.print("input shift parameter: ");
-        int shiftParameter = StaticMethods.inputInteger(1);
+        int shiftParameter = StaticMethods.inputInteger();
         String encryptedAlphabet = encryptAlphabet(alphabet, shiftParameter);
         System.out.println("alphabet: " + alphabet);
         System.out.println("encrypted alphabet: " + encryptedAlphabet);
         System.out.print("input string: ");
         String inputString = scanner.nextLine().toLowerCase();
+        if(inputString.equals("")){
+            System.out.println("empty imput string");
+            System.exit(0);
+        }
 
         String encryptedString = encryptString(inputString, alphabet, encryptedAlphabet);
         System.out.println("encrypted string: " + encryptedString);
 
-        String decipheredString = encryptString(encryptedString,encryptedAlphabet,alphabet);
-        System.out.println("deciphered string: " + decipheredString);
+        String decryptedString = encryptString(encryptedString,encryptedAlphabet,alphabet);
+        System.out.println("decrypted string: " + decryptedString);
     }
 
     private static String encryptAlphabet(String alphabet, int shiftParameter) {
         String resultAlphabet = "";
+        while (shiftParameter<0) {
+            shiftParameter+=alphabet.length();
+        }
+
                 for (int i = 0; i < alphabet.length(); i++) {
             resultAlphabet = resultAlphabet + alphabet.charAt((i + shiftParameter) % alphabet.length());
         }
