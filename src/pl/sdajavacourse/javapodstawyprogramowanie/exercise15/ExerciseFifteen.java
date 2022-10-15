@@ -1,15 +1,14 @@
-package pl.sdajavacourse.javapodstawyprogramowanie;
-//Napisz program, który pobierze od użytkownika 10 dowolnie dużych liczb (zmiennych typu int) i wypisze te,
-// które wystąpiły minimum dwukrotnie.
+package pl.sdajavacourse.javapodstawyprogramowanie.exercise15;
+
+import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 
 import java.util.Arrays;
 
-public class exercise15 {
+public class ExerciseFifteen {
     public static void main(String[] args) {
         int[] inputInteger = inputIntArray();
         Arrays.sort(inputInteger);
         int checker = inputInteger[0] - 1;
-
         for (int i = 0; i < inputInteger.length - 1; i++) {
             if (inputInteger[i] == inputInteger[i + 1]) {
                 if (checker != inputInteger[i]) {
@@ -18,8 +17,6 @@ public class exercise15 {
                 }
             }
         }
-
-
     }
 
     static private int[] inputIntArray() {
@@ -31,5 +28,4 @@ public class exercise15 {
         }
         return integerArray;
     }
-
 }

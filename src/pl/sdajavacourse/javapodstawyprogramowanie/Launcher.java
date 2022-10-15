@@ -3,6 +3,7 @@ package pl.sdajavacourse.javapodstawyprogramowanie;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise1.ExerciseOne;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise11.ExerciseEleven;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise12.ExerciseTwelve;
+import pl.sdajavacourse.javapodstawyprogramowanie.exercise15.ExerciseFifteen;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise3.ExerciseThree;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise2.ExerciseTwo;
 import pl.sdajavacourse.javapodstawyprogramowanie.exercise4.ExerciseFour;
@@ -43,7 +44,7 @@ public class Launcher {
 //                """);
 
       //  int exerciseNumber = StaticMethods.inputInteger(1,numberOfExercises);
-        int exerciseNumber = 26;
+        int exerciseNumber = 1;
         System.out.println("exerciseNumber = " + exerciseNumber);
         switch (exerciseNumber) {
             case 1 -> ExerciseOne.runExerciseOne();

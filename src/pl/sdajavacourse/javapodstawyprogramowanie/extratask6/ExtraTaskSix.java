@@ -21,7 +21,7 @@ public class ExtraTaskSix {
         System.out.println("encrypted alphabet: " + encryptedAlphabet);
         System.out.print("input string: ");
         String inputString = scanner.nextLine().toLowerCase();
-        if(inputString.equals("")){
+        if (inputString.equals("")) {
             System.out.println("empty imput string");
             System.exit(0);
         }
@@ -29,33 +29,33 @@ public class ExtraTaskSix {
         String encryptedString = encryptString(inputString, alphabet, encryptedAlphabet);
         System.out.println("encrypted string: " + encryptedString);
 
-        String decryptedString = encryptString(encryptedString,encryptedAlphabet,alphabet);
+        String decryptedString = encryptString(encryptedString, encryptedAlphabet, alphabet);
         System.out.println("decrypted string: " + decryptedString);
     }
 
     private static String encryptAlphabet(String alphabet, int shiftParameter) {
         String resultAlphabet = "";
-        while (shiftParameter<0) {
-            shiftParameter+=alphabet.length();
+        while (shiftParameter < 0) {
+            shiftParameter += alphabet.length();
         }
 
-                for (int i = 0; i < alphabet.length(); i++) {
+        for (int i = 0; i < alphabet.length(); i++) {
             resultAlphabet = resultAlphabet + alphabet.charAt((i + shiftParameter) % alphabet.length());
         }
         return resultAlphabet;
     }
 
     private static String encryptString(String inputString, String alphabet, String encryptedAlphabet) {
-String result="";
+        String result = "";
         for (int i = 0; i < inputString.length(); i++) {
-            try{
+            try {
                 int alphaNumber = alphabet.indexOf(inputString.charAt(i));
                 result += encryptedAlphabet.charAt(alphaNumber);
-            } catch (Exception StringIndexOutOfBoundsException){
+            } catch (Exception StringIndexOutOfBoundsException) {
                 result += inputString.charAt(i);
             }
         }
-return result;
+        return result;
     }
 
 }
