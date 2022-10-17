@@ -4,6 +4,7 @@ import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 
 import java.util.Arrays;
 
+//Napisz program obliczający różnicę pomiędzy największą i najmniejszą wartością z tablicy
 public class ExtraTaskThree {
     public static void runExtraTaskThree() {
 

@@ -4,9 +4,10 @@ import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 
 import java.util.Arrays;
 
+//Napisz program usuwający duplikaty z tablicy i zwracający nową tablicę
 public class ExtraTaskTwo {
     public static void runExtraTaskTwo() {
-        System.out.println("exercise plum");
+        System.out.println("removing multiplied elements of an array");
         int[] inputArray = StaticMethods.inputIntArray();
         System.out.println(Arrays.toString(inputArray));
 

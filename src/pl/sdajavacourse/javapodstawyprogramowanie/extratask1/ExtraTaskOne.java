@@ -3,7 +3,7 @@ package pl.sdajavacourse.javapodstawyprogramowanie.extratask1;
 import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 
 import java.util.Arrays;
-
+//Napisz program, który odwróci zawartość tablicy
 public class ExtraTaskOne {
     public static void runExtraTaskOne() {
         System.out.println("This program inverts elements of an array");

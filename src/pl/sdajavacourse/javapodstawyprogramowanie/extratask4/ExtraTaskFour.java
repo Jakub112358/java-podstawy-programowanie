@@ -5,6 +5,8 @@ import pl.sdajavacourse.javapodstawyprogramowanie.StaticMethods;
 
 import java.util.Arrays;
 
+//program sprawdza, czy suma dowolnych 2 elementów tablicy równa się sumie K. dodatkowo sprawdza,
+// czy 2 dowolne elementy tablicy równają się innemu elementowi tablicy.
 public class ExtraTaskFour {
     public static void runExtraTaskFour() {
         System.out.println("input array");
