@@ -1,5 +1,6 @@
 package pl.sdajavacourse.javapodstawyprogramowanie.exercise19;
 
+
 //Napisz program, składający się z kilku klas:
 //a. Klasy Author, reprezentującą autora – pisarza wierszów, składającej się z pól surname oraz nationality (oba typu String)
 //b. Klasy Poem, reprezentującą wiersz, składającą się z pól creator (typu Author) oraz stropheNumbers (typu int – reprezentującej ilość
@@ -10,30 +11,23 @@ package pl.sdajavacourse.javapodstawyprogramowanie.exercise19;
 public class Main {
     public static void main(String[] args) {
 
-        Author slowacki = new Author("Słowacki", "polish");
-        Author mickiewicz = new Author("Mickiewicz", "polish");
+        Author slowacki = new Author("Juliusz Słowacki",Nationality.POLISH);
+        Author mickiewicz = new Author("Adam Mickiewicz", Nationality.POLISH);
         Author poe = new Author();
-        poe.setSurname("Poe");
-        poe.setNationality("american");
+        poe.setSurname("Edgar Allan Poe");
+        poe.setNationality(Nationality.AMERICAN);
 
         Poem[] poems = new Poem[3];
 
         poems[0] = new Poem(slowacki, 40);
-        poems[1] = new Poem(mickiewicz, 43);
+        poems[1] = new Poem(mickiewicz, 47);
         poems[2] = new Poem(poe, 45);
 
-        checkLongestPoem(poems);
+        Poem.checkLongestPoem(poems);
+        Poem.checkLongestPoem(poems,2);
+        Poem.checkLongestPoem(poems,3);
 
+        System.out.println("the sum of strophes equals " + Poem.sumOfStrophes(poems, Nationality.POLISH));
 
-    }
-
-    private static void checkLongestPoem(Poem[] poems) {
-        int authorIndex = 0;
-        for (int i = 1; i < poems.length; i++) {
-            if (poems[i].getStropheNumbers() > poems[authorIndex].getStropheNumbers()) {
-                authorIndex = i;
-            }
-        }
-        System.out.println("author of poem with the highest number of strophes is " + poems[authorIndex].getCreator().getSurname());
     }
 }

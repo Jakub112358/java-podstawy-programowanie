@@ -12,7 +12,6 @@ public class ExerciseEighteen {
 
         System.out.print("input sentence: ");
         String inputString = scanner.nextLine();
-
         if (inputString.matches(".*\\b[aA]\\b+ \\bpsik\\b.*")) {
             System.out.println("na zdrowie! ");
         } else System.out.println("🤷‍");

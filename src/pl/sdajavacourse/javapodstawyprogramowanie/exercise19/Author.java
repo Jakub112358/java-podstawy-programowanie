@@ -2,9 +2,9 @@ package pl.sdajavacourse.javapodstawyprogramowanie.exercise19;
 
 public class Author {
     private String surname;
-    private String nationality;
+    private Nationality nationality;
 
-    public Author(String surname, String nationality) {
+    public Author(String surname, Nationality nationality) {
         this.surname = surname;
         this.nationality = nationality;
     }
@@ -16,11 +16,15 @@ public class Author {
         this.surname = surname;
     }
 
-    public void setNationality(String nationality) {
+    public void setNationality(Nationality nationality) {
         this.nationality = nationality;
     }
 
     public String getSurname() {
         return surname;
+    }
+
+    public Nationality getNationality() {
+        return nationality;
     }
 }
